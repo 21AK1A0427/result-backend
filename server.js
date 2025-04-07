@@ -6,10 +6,10 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-app.post("/submit", async (req, res) => {
+app.post("/submit1", async (req, res) => {
     try {
         const response = await axios.post(
-            "https://script.google.com/macros/s/AKfycbwUx3ITUJASCTcT5h31jVLc1Ue-4bAVb9ceF0IXS698eUnpeXOQ35WBXbJLJPD2dJLv/exec",
+            "https://script.google.com/macros/s/AKfycbzwfz91RwaHp3O5zj6tqOZIdiBtGVbHAVgEHb_-51HCYPKbb-FtjzkIjxbmtVXoJ57SIw/exec",
             req.body
         );
         res.json(response.data);
